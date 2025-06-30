@@ -1,1 +1,1 @@
-import{a}from"/cookbook-template/build/_shared/chunk-OCZQ5VW4.js";import"/cookbook-template/build/_shared/chunk-3MZURCDM.js";import"/cookbook-template/build/_shared/chunk-2NH4LW52.js";export default a();
+import{a}from"/icesat2-cookbook/build/_shared/chunk-OCZQ5VW4.js";import"/icesat2-cookbook/build/_shared/chunk-3MZURCDM.js";import"/icesat2-cookbook/build/_shared/chunk-2NH4LW52.js";export default a();
