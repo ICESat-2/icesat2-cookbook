@@ -103,6 +103,7 @@ dependencies:
   - mistune=3.1.3
   - myst-nb=1.2.0
   - myst-parser=3.0.1
+  - mystmd
   - nbclient=0.10.2
   - nbconvert-core=7.16.6
   - nbdime=4.0.2
