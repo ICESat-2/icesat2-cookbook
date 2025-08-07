@@ -139,3 +139,13 @@ Alternatively, you can use [Pixi](https://pixi.sh/) for a more streamlined envir
    ```
 
 This will automatically create the environment, install all dependencies, and launch JupyterLab in the `notebooks` directory.
+
+#### Exporting Conda Environment with Pixi
+
+If you're using pixi and want to generate a conda-compatible `environment.yml` file for sharing or reproducibility:
+
+```bash
+pixi run export-env
+```
+
+This command will export the pixi workspace to a conda environment file (`environment.yml`) that can be used with conda or mamba.
