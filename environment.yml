@@ -1,17 +1,20 @@
 name: cookbook-dev
 channels:
-  - conda-forge
+- conda-forge
+- nodefaults
 dependencies:
-  - jupyterlab
-  - jupyterlab-myst
-  - cartopy
-  - earthaccess
-  - geodatasets
-  - geopandas
-  - ipympl
-  - matplotlib
-  - mystmd
-  - numpy
-  - pyproj
-  - rioxarray
-  - sliderule
+- cartopy *
+- matplotlib *
+- pre-commit *
+- jupyterlab *
+- jupyterlab-myst *
+- earthaccess *
+- geodatasets *
+- geopandas *
+- ipympl *
+- ipykernel *
+- mystmd *
+- numpy *
+- pyproj *
+- rioxarray *
+- sliderule *

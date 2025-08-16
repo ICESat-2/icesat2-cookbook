@@ -136,3 +136,5 @@ dmypy.json
 .nfs*
 
 .vscode/
+# pixi environments
+.pixi
