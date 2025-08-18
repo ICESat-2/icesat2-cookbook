@@ -32,4 +32,6 @@ project:
         - file: notebooks/snowdepth.ipynb
   jupyter:
       binder:
-        repo: projectpythia/cookbook-template
+        url: https://hub.cryointhecloud.com
+        provider: github
+        repo: ICESAT-2HackWeek/icesat2-cookbook
