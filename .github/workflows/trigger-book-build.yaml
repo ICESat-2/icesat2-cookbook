@@ -5,6 +5,9 @@ on:
 jobs:
   build:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
+    secrets:
+      EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+      EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
     with:
       artifact_name: book-zip-${{ github.event.number }}
       base_url: '/${{ github.event.repository.name }}/_preview/${{ github.event.number }}'
