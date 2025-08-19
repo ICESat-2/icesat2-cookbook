@@ -13,6 +13,7 @@ project:
     - title: Preamble
       children:
         - file: notebooks/governance.ipynb
+        - file: notebooks/contributing.ipynb
         - file: notebooks/how-to-cite.md
     - title: Foundations
       children:
