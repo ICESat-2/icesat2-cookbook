@@ -24,6 +24,7 @@ geodatasets = "*"
 geopandas = "*"
 h5netcdf = "*"
 ipykernel = "*"
+ipympl = "*"
 mystmd = "*"
 numpy = "*"
 pyproj = "*"
@@ -32,7 +33,6 @@ sliderule = "*"
 
 [feature.plotting.dependencies]
 cartopy = "*"
-ipympl = "*"
 matplotlib = "*"
 
 [feature.linting.dependencies]
