@@ -11,6 +11,7 @@ dependencies:
 - earthaccess *
 - geodatasets *
 - geopandas *
+- h5netcdf *
 - ipympl *
 - ipykernel *
 - mystmd *
