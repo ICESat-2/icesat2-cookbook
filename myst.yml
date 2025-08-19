@@ -12,6 +12,7 @@ project:
     - file: README.md
     - title: Preamble
       children:
+        - file: notebooks/governance.ipynb
         - file: notebooks/how-to-cite.md
     - title: Foundations
       children:
