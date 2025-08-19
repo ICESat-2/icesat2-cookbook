@@ -11,8 +11,8 @@ jobs:
   build:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     secrets:
-      EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
-      EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+      EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USER }}
+      EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASS }}
 
   deploy:
     needs: build
