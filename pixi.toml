@@ -18,10 +18,11 @@ export-env = { cmd = "pixi workspace export conda-environment -e cookbook-dev > 
 [dependencies]
 jupyterlab = "*"
 jupyterlab-myst = "*"
+dask = "*"
 earthaccess = "*"
 geodatasets = "*"
 geopandas = "*"
-ipympl = "*"
+h5netcdf = "*"
 ipykernel = "*"
 mystmd = "*"
 numpy = "*"
@@ -31,6 +32,7 @@ sliderule = "*"
 
 [feature.plotting.dependencies]
 cartopy = "*"
+ipympl = "*"
 matplotlib = "*"
 
 [feature.linting.dependencies]
