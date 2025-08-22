@@ -1,7 +1,7 @@
 name: trigger-book-build
 on:
   workflow_run:
-    workflows: [trigger-pixi-environment]
+    workflows: ["trigger-pixi-environment"]
     types: [completed]
 
 jobs:

@@ -1,7 +1,7 @@
 name: trigger-link-check
 on:
   workflow_run:
-    workflows: [trigger-pixi-environment]
+    workflows: ["trigger-pixi-environment"]
     types: [completed]
 
 jobs:
