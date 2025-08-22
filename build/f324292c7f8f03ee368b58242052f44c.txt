@@ -1,0 +1,273 @@
+[31m---------------------------------------------------------------------------[39m
+[31mRemoteDisconnected[39m                        Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connectionpool.py:787[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    786[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m787[39m response = [38;5;28;43mself[39;49m[43m.[49m[43m_make_request[49m[43m([49m
+[32m    788[39m [43m    [49m[43mconn[49m[43m,[49m
+[32m    789[39m [43m    [49m[43mmethod[49m[43m,[49m
+[32m    790[39m [43m    [49m[43murl[49m[43m,[49m
+[32m    791[39m [43m    [49m[43mtimeout[49m[43m=[49m[43mtimeout_obj[49m[43m,[49m
+[32m    792[39m [43m    [49m[43mbody[49m[43m=[49m[43mbody[49m[43m,[49m
+[32m    793[39m [43m    [49m[43mheaders[49m[43m=[49m[43mheaders[49m[43m,[49m
+[32m    794[39m [43m    [49m[43mchunked[49m[43m=[49m[43mchunked[49m[43m,[49m
+[32m    795[39m [43m    [49m[43mretries[49m[43m=[49m[43mretries[49m[43m,[49m
+[32m    796[39m [43m    [49m[43mresponse_conn[49m[43m=[49m[43mresponse_conn[49m[43m,[49m
+[32m    797[39m [43m    [49m[43mpreload_content[49m[43m=[49m[43mpreload_content[49m[43m,[49m
+[32m    798[39m [43m    [49m[43mdecode_content[49m[43m=[49m[43mdecode_content[49m[43m,[49m
+[32m    799[39m [43m    [49m[43m*[49m[43m*[49m[43mresponse_kw[49m[43m,[49m
+[32m    800[39m [43m[49m[43m)[49m
+[32m    802[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connectionpool.py:534[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    533[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m534[39m     response = [43mconn[49m[43m.[49m[43mgetresponse[49m[43m([49m[43m)[49m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connection.py:565[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    564[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m565[39m httplib_response = [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[43m.[49m[43mgetresponse[49m[43m([49m[43m)[49m
+[32m    567[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:1430[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1429[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1430[39m     [43mresponse[49m[43m.[49m[43mbegin[49m[43m([49m[43m)[49m
+[32m   1431[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:331[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    330[39m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[32m--> [39m[32m331[39m     version, status, reason = [38;5;28;43mself[39;49m[43m.[49m[43m_read_status[49m[43m([49m[43m)[49m
+[32m    332[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:300[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    297[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m line:
+[32m    298[39m     [38;5;66;03m# Presumably, the server closed the connection before[39;00m
+[32m    299[39m     [38;5;66;03m# sending a valid response.[39;00m
+[32m--> [39m[32m300[39m     [38;5;28;01mraise[39;00m RemoteDisconnected([33m"[39m[33mRemote end closed connection without[39m[33m"[39m
+[32m    301[39m                              [33m"[39m[33m response[39m[33m"[39m)
+[32m    302[39m [38;5;28;01mtry[39;00m:
+
+[31mRemoteDisconnected[39m: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+[31mProtocolError[39m                             Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/adapters.py:644[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    643[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m644[39m     resp = [43mconn[49m[43m.[49m[43murlopen[49m[43m([49m
+[32m    645[39m [43m        [49m[43mmethod[49m[43m=[49m[43mrequest[49m[43m.[49m[43mmethod[49m[43m,[49m
+[32m    646[39m [43m        [49m[43murl[49m[43m=[49m[43murl[49m[43m,[49m
+[32m    647[39m [43m        [49m[43mbody[49m[43m=[49m[43mrequest[49m[43m.[49m[43mbody[49m[43m,[49m
+[32m    648[39m [43m        [49m[43mheaders[49m[43m=[49m[43mrequest[49m[43m.[49m[43mheaders[49m[43m,[49m
+[32m    649[39m [43m        [49m[43mredirect[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[32m    650[39m [43m        [49m[43massert_same_host[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[32m    651[39m [43m        [49m[43mpreload_content[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[32m    652[39m [43m        [49m[43mdecode_content[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[32m    653[39m [43m        [49m[43mretries[49m[43m=[49m[38;5;28;43mself[39;49m[43m.[49m[43mmax_retries[49m[43m,[49m
+[32m    654[39m [43m        [49m[43mtimeout[49m[43m=[49m[43mtimeout[49m[43m,[49m
+[32m    655[39m [43m        [49m[43mchunked[49m[43m=[49m[43mchunked[49m[43m,[49m
+[32m    656[39m [43m    [49m[43m)[49m
+[32m    658[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connectionpool.py:841[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    839[39m     new_e = ProtocolError([33m"[39m[33mConnection aborted.[39m[33m"[39m, new_e)
+[32m--> [39m[32m841[39m retries = [43mretries[49m[43m.[49m[43mincrement[49m[43m([49m
+[32m    842[39m [43m    [49m[43mmethod[49m[43m,[49m[43m [49m[43murl[49m[43m,[49m[43m [49m[43merror[49m[43m=[49m[43mnew_e[49m[43m,[49m[43m [49m[43m_pool[49m[43m=[49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43m_stacktrace[49m[43m=[49m[43msys[49m[43m.[49m[43mexc_info[49m[43m([49m[43m)[49m[43m[[49m[32;43m2[39;49m[43m][49m
+[32m    843[39m [43m[49m[43m)[49m
+[32m    844[39m retries.sleep()
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/util/retry.py:474[39m, in [36mRetry.increment[39m[34m(self, method, url, response, error, _pool, _stacktrace)[39m
+[32m    473[39m [38;5;28;01mif[39;00m read [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m [38;5;129;01mor[39;00m method [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._is_method_retryable(method):
+[32m--> [39m[32m474[39m     [38;5;28;01mraise[39;00m [43mreraise[49m[43m([49m[38;5;28;43mtype[39;49m[43m([49m[43merror[49m[43m)[49m[43m,[49m[43m [49m[43merror[49m[43m,[49m[43m [49m[43m_stacktrace[49m[43m)[49m
+[32m    475[39m [38;5;28;01melif[39;00m read [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/util/util.py:38[39m, in [36mreraise[39m[34m(tp, value, tb)[39m
+[32m     37[39m [38;5;28;01mif[39;00m value.__traceback__ [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m tb:
+[32m---> [39m[32m38[39m     [38;5;28;01mraise[39;00m value.with_traceback(tb)
+[32m     39[39m [38;5;28;01mraise[39;00m value
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connectionpool.py:787[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    786[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m787[39m response = [38;5;28;43mself[39;49m[43m.[49m[43m_make_request[49m[43m([49m
+[32m    788[39m [43m    [49m[43mconn[49m[43m,[49m
+[32m    789[39m [43m    [49m[43mmethod[49m[43m,[49m
+[32m    790[39m [43m    [49m[43murl[49m[43m,[49m
+[32m    791[39m [43m    [49m[43mtimeout[49m[43m=[49m[43mtimeout_obj[49m[43m,[49m
+[32m    792[39m [43m    [49m[43mbody[49m[43m=[49m[43mbody[49m[43m,[49m
+[32m    793[39m [43m    [49m[43mheaders[49m[43m=[49m[43mheaders[49m[43m,[49m
+[32m    794[39m [43m    [49m[43mchunked[49m[43m=[49m[43mchunked[49m[43m,[49m
+[32m    795[39m [43m    [49m[43mretries[49m[43m=[49m[43mretries[49m[43m,[49m
+[32m    796[39m [43m    [49m[43mresponse_conn[49m[43m=[49m[43mresponse_conn[49m[43m,[49m
+[32m    797[39m [43m    [49m[43mpreload_content[49m[43m=[49m[43mpreload_content[49m[43m,[49m
+[32m    798[39m [43m    [49m[43mdecode_content[49m[43m=[49m[43mdecode_content[49m[43m,[49m
+[32m    799[39m [43m    [49m[43m*[49m[43m*[49m[43mresponse_kw[49m[43m,[49m
+[32m    800[39m [43m[49m[43m)[49m
+[32m    802[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connectionpool.py:534[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    533[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m534[39m     response = [43mconn[49m[43m.[49m[43mgetresponse[49m[43m([49m[43m)[49m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/urllib3/connection.py:565[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    564[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m565[39m httplib_response = [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[43m.[49m[43mgetresponse[49m[43m([49m[43m)[49m
+[32m    567[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:1430[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1429[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1430[39m     [43mresponse[49m[43m.[49m[43mbegin[49m[43m([49m[43m)[49m
+[32m   1431[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:331[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    330[39m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[32m--> [39m[32m331[39m     version, status, reason = [38;5;28;43mself[39;49m[43m.[49m[43m_read_status[49m[43m([49m[43m)[49m
+[32m    332[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/http/client.py:300[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    297[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m line:
+[32m    298[39m     [38;5;66;03m# Presumably, the server closed the connection before[39;00m
+[32m    299[39m     [38;5;66;03m# sending a valid response.[39;00m
+[32m--> [39m[32m300[39m     [38;5;28;01mraise[39;00m RemoteDisconnected([33m"[39m[33mRemote end closed connection without[39m[33m"[39m
+[32m    301[39m                              [33m"[39m[33m response[39m[33m"[39m)
+[32m    302[39m [38;5;28;01mtry[39;00m:
+
+[31mProtocolError[39m: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+[31mConnectionError[39m                           Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 4[39m
+[32m      2[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m check_fileexist:
+[32m      3[39m     order = region_a.order_granules(subset=[38;5;28;01mTrue[39;00m) 
+[32m----> [39m[32m4[39m     files = [43morder[49m[43m.[49m[43mdownload_granules[49m[43m([49m[33;43m"[39;49m[33;43m./data[39;49m[33;43m"[39;49m[43m)[49m
+[32m      5[39m [38;5;28;01melse[39;00m:
+[32m      6[39m     [38;5;28mprint[39m([33m"[39m[33mATL15 files already exist[39m[33m"[39m)
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/icepyx/core/orders.py:170[39m, in [36mDataOrder.download_granules[39m[34m(self, path, overwrite)[39m
+[32m    154[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mdownload_granules[39m([38;5;28mself[39m, path, overwrite=[38;5;28;01mFalse[39;00m) -> Union[[38;5;28mlist[39m, [38;5;28;01mNone[39;00m]:
+[32m    155[39m [38;5;250m    [39m[33;03m"""[39;00m
+[32m    156[39m [33;03m    Download the granules for the order.[39;00m
+[32m    157[39m 
+[32m   (...)[39m[32m    168[39m 
+[32m    169[39m [33;03m    """[39;00m
+[32m--> [39m[32m170[39m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[43m.[49m[43mdownload[49m[43m([49m[43mpath[49m[43m,[49m[43m [49m[43moverwrite[49m[43m=[49m[43moverwrite[49m[43m)[49m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/icepyx/core/orders.py:191[39m, in [36mDataOrder.download[39m[34m(self, path, overwrite)[39m
+[32m    189[39m path.mkdir(parents=[38;5;28;01mTrue[39;00m, exist_ok=[38;5;28;01mTrue[39;00m)
+[32m    190[39m [38;5;28;01mif[39;00m [38;5;28mself[39m.type == [33m"[39m[33msubset[39m[33m"[39m:
+[32m--> [39m[32m191[39m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[43m.[49m[43mharmony_api[49m[43m.[49m[43mdownload_granules[49m[43m([49m
+[32m    192[39m [43m        [49m[43mdownload_dir[49m[43m=[49m[38;5;28;43mstr[39;49m[43m([49m[43mpath[49m[43m)[49m[43m,[49m[43m [49m[43moverwrite[49m[43m=[49m[43moverwrite[49m
+[32m    193[39m [43m    [49m[43m)[49m
+[32m    194[39m [38;5;28;01melse[39;00m:
+[32m    195[39m     [38;5;28;01mif[39;00m [38;5;28mself[39m.granules [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/icepyx/core/harmony.py:319[39m, in [36mHarmonyApi.download_granules[39m[34m(self, download_dir, overwrite)[39m
+[32m    317[39m all_paths = []
+[32m    318[39m [38;5;28;01mfor[39;00m job_id [38;5;129;01min[39;00m [38;5;28mself[39m.job_ids:
+[32m--> [39m[32m319[39m     paths = [38;5;28;43mself[39;49m[43m.[49m[43m_download_job_results[49m[43m([49m
+[32m    320[39m [43m        [49m[43mjob_id[49m[43m=[49m[43mjob_id[49m[43m,[49m[43m [49m[43mdownload_dir[49m[43m=[49m[43mdownload_dir[49m[43m,[49m[43m [49m[43moverwrite[49m[43m=[49m[43moverwrite[49m
+[32m    321[39m [43m    [49m[43m)[49m
+[32m    322[39m     all_paths.extend(paths)
+[32m    324[39m [38;5;28;01mreturn[39;00m all_paths
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/icepyx/core/harmony.py:292[39m, in [36mHarmonyApi._download_job_results[39m[34m(self, job_id, download_dir, overwrite)[39m
+[32m    290[39m paths = []
+[32m    291[39m [38;5;28;01mfor[39;00m future [38;5;129;01min[39;00m as_completed(futures):
+[32m--> [39m[32m292[39m     paths.append(Path([43mfuture[49m[43m.[49m[43mresult[49m[43m([49m[43m)[49m))
+[32m    294[39m [38;5;28;01mreturn[39;00m paths
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/concurrent/futures/_base.py:449[39m, in [36mFuture.result[39m[34m(self, timeout)[39m
+[32m    447[39m     [38;5;28;01mraise[39;00m CancelledError()
+[32m    448[39m [38;5;28;01melif[39;00m [38;5;28mself[39m._state == FINISHED:
+[32m--> [39m[32m449[39m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[43m.[49m[43m__get_result[49m[43m([49m[43m)[49m
+[32m    451[39m [38;5;28mself[39m._condition.wait(timeout)
+[32m    453[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._state [38;5;129;01min[39;00m [CANCELLED, CANCELLED_AND_NOTIFIED]:
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/concurrent/futures/_base.py:401[39m, in [36mFuture.__get_result[39m[34m(self)[39m
+[32m    399[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._exception [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m    400[39m     [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m401[39m         [38;5;28;01mraise[39;00m [38;5;28mself[39m._exception
+[32m    402[39m     [38;5;28;01mfinally[39;00m:
+[32m    403[39m         [38;5;66;03m# Break a reference cycle with the exception in self._exception[39;00m
+[32m    404[39m         [38;5;28mself[39m = [38;5;28;01mNone[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/concurrent/futures/thread.py:59[39m, in [36m_WorkItem.run[39m[34m(self)[39m
+[32m     56[39m     [38;5;28;01mreturn[39;00m
+[32m     58[39m [38;5;28;01mtry[39;00m:
+[32m---> [39m[32m59[39m     result = [38;5;28;43mself[39;49m[43m.[49m[43mfn[49m[43m([49m[43m*[49m[38;5;28;43mself[39;49m[43m.[49m[43margs[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[38;5;28;43mself[39;49m[43m.[49m[43mkwargs[49m[43m)[49m
+[32m     60[39m [38;5;28;01mexcept[39;00m [38;5;167;01mBaseException[39;00m [38;5;28;01mas[39;00m exc:
+[32m     61[39m     [38;5;28mself[39m.future.set_exception(exc)
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/harmony/client.py:910[39m, in [36mClient._download_file[39m[34m(self, url, directory, overwrite)[39m
+[32m    906[39m     data_dict = [38;5;28mdict[39m(parse.parse_qsl(parse.urlsplit(url).query))
+[32m    907[39m headers = {
+[32m    908[39m     [33m"[39m[33mAccept-Encoding[39m[33m"[39m: [33m"[39m[33midentity[39m[33m"[39m
+[32m    909[39m }
+[32m--> [39m[32m910[39m [38;5;28;01mwith[39;00m [38;5;28;43mgetattr[39;49m[43m([49m[43msession[49m[43m,[49m[43m [49m[43mmethod[49m[43m)[49m[43m([49m
+[32m    911[39m [43m        [49m[43mnew_url[49m[43m,[49m[43m [49m[43mdata[49m[43m=[49m[43mdata_dict[49m[43m,[49m[43m [49m[43mstream[49m[43m=[49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mheaders[49m[43m=[49m[43mheaders[49m[43m)[49m [38;5;28;01mas[39;00m r:
+[32m    912[39m     [38;5;28;01mwith[39;00m [38;5;28mopen[39m(filename, [33m'[39m[33mwb[39m[33m'[39m) [38;5;28;01mas[39;00m f:
+[32m    913[39m         shutil.copyfileobj(r.raw, f, length=chunksize)
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/sessions.py:602[39m, in [36mSession.get[39m[34m(self, url, **kwargs)[39m
+[32m    594[39m [38;5;250m[39m[33mr[39m[33;03m"""Sends a GET request. Returns :class:`Response` object.[39;00m
+[32m    595[39m 
+[32m    596[39m [33;03m:param url: URL for the new :class:`Request` object.[39;00m
+[32m    597[39m [33;03m:param \*\*kwargs: Optional arguments that ``request`` takes.[39;00m
+[32m    598[39m [33;03m:rtype: requests.Response[39;00m
+[32m    599[39m [33;03m"""[39;00m
+[32m    601[39m kwargs.setdefault([33m"[39m[33mallow_redirects[39m[33m"[39m, [38;5;28;01mTrue[39;00m)
+[32m--> [39m[32m602[39m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[43m.[49m[43mrequest[49m[43m([49m[33;43m"[39;49m[33;43mGET[39;49m[33;43m"[39;49m[43m,[49m[43m [49m[43murl[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/sessions.py:589[39m, in [36mSession.request[39m[34m(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)[39m
+[32m    584[39m send_kwargs = {
+[32m    585[39m     [33m"[39m[33mtimeout[39m[33m"[39m: timeout,
+[32m    586[39m     [33m"[39m[33mallow_redirects[39m[33m"[39m: allow_redirects,
+[32m    587[39m }
+[32m    588[39m send_kwargs.update(settings)
+[32m--> [39m[32m589[39m resp = [38;5;28;43mself[39;49m[43m.[49m[43msend[49m[43m([49m[43mprep[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43msend_kwargs[49m[43m)[49m
+[32m    591[39m [38;5;28;01mreturn[39;00m resp
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/sessions.py:724[39m, in [36mSession.send[39m[34m(self, request, **kwargs)[39m
+[32m    721[39m [38;5;28;01mif[39;00m allow_redirects:
+[32m    722[39m     [38;5;66;03m# Redirect resolving generator.[39;00m
+[32m    723[39m     gen = [38;5;28mself[39m.resolve_redirects(r, request, **kwargs)
+[32m--> [39m[32m724[39m     history = [43m[[49m[43mresp[49m[43m [49m[38;5;28;43;01mfor[39;49;00m[43m [49m[43mresp[49m[43m [49m[38;5;129;43;01min[39;49;00m[43m [49m[43mgen[49m[43m][49m
+[32m    725[39m [38;5;28;01melse[39;00m:
+[32m    726[39m     history = []
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/sessions.py:265[39m, in [36mSessionRedirectMixin.resolve_redirects[39m[34m(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)[39m
+[32m    263[39m     [38;5;28;01myield[39;00m req
+[32m    264[39m [38;5;28;01melse[39;00m:
+[32m--> [39m[32m265[39m     resp = [38;5;28;43mself[39;49m[43m.[49m[43msend[49m[43m([49m
+[32m    266[39m [43m        [49m[43mreq[49m[43m,[49m
+[32m    267[39m [43m        [49m[43mstream[49m[43m=[49m[43mstream[49m[43m,[49m
+[32m    268[39m [43m        [49m[43mtimeout[49m[43m=[49m[43mtimeout[49m[43m,[49m
+[32m    269[39m [43m        [49m[43mverify[49m[43m=[49m[43mverify[49m[43m,[49m
+[32m    270[39m [43m        [49m[43mcert[49m[43m=[49m[43mcert[49m[43m,[49m
+[32m    271[39m [43m        [49m[43mproxies[49m[43m=[49m[43mproxies[49m[43m,[49m
+[32m    272[39m [43m        [49m[43mallow_redirects[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[32m    273[39m [43m        [49m[43m*[49m[43m*[49m[43madapter_kwargs[49m[43m,[49m
+[32m    274[39m [43m    [49m[43m)[49m
+[32m    276[39m     extract_cookies_to_jar([38;5;28mself[39m.cookies, prepared_request, resp.raw)
+[32m    278[39m     [38;5;66;03m# extract redirect url, if any, for the next loop[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/sessions.py:703[39m, in [36mSession.send[39m[34m(self, request, **kwargs)[39m
+[32m    700[39m start = preferred_clock()
+[32m    702[39m [38;5;66;03m# Send the request[39;00m
+[32m--> [39m[32m703[39m r = [43madapter[49m[43m.[49m[43msend[49m[43m([49m[43mrequest[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+[32m    705[39m [38;5;66;03m# Total elapsed time of the request (approximately)[39;00m
+[32m    706[39m elapsed = preferred_clock() - start
+
+[36mFile [39m[32m~/micromamba/envs/cookbook-dev/lib/python3.13/site-packages/requests/adapters.py:659[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    644[39m     resp = conn.urlopen(
+[32m    645[39m         method=request.method,
+[32m    646[39m         url=url,
+[32m   (...)[39m[32m    655[39m         chunked=chunked,
+[32m    656[39m     )
+[32m    658[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+[32m--> [39m[32m659[39m     [38;5;28;01mraise[39;00m [38;5;167;01mConnectionError[39;00m(err, request=request)
+[32m    661[39m [38;5;28;01mexcept[39;00m MaxRetryError [38;5;28;01mas[39;00m e:
+[32m    662[39m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m(e.reason, ConnectTimeoutError):
+[32m    663[39m         [38;5;66;03m# TODO: Remove this in 3.0.0: see #2811[39;00m
+
+[31mConnectionError[39m: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
