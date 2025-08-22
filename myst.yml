@@ -8,6 +8,9 @@ project:
   authors:
     - name: ICESat-2 team
   copyright: '2025'
+  references:
+    awesome: https://icesat-2hackweek.github.io/awesome-icesat2
+    cryocloud: https://book.cryointhecloud.com
   toc:
     - file: README.md
     - title: Preamble
@@ -31,6 +34,10 @@ project:
         - file: notebooks/inland-hydrology.ipynb
         - file: notebooks/bathymetry.ipynb
         - file: notebooks/snowdepth.ipynb
+    - title: Additional Resources
+      children:
+        - file: additional-resources/awesome.md
+        - file: additional-resources/cryocloud.md
   jupyter:
       binder:
         url: https://hub.cryointhecloud.com
