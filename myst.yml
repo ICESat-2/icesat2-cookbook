@@ -36,7 +36,8 @@ project:
         - file: notebooks/snowdepth.ipynb
     - title: Additional Resources
       children:
-        - file: additional-resources.md
+        - file: additional-resources/awesome.md
+        - file: additional-resources/cryocloud.md
   jupyter:
       binder:
         url: https://hub.cryointhecloud.com
