@@ -19,7 +19,7 @@ jobs:
       - name: use pixi to create environment
         run: |
           pixi run export-env
-      - name: Zip the workspace
+      - name: zip the workspace
         run: |
           set -x
           set -e
