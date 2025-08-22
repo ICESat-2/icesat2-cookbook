@@ -1,0 +1,34 @@
+name: trigger-pixi-environment
+on:
+  pull_request:
+
+jobs:
+  pixi-env:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -leo pipefail {0}
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup pixi
+        uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          pixi-version: v0.49.0
+          environments: cookbook-dev
+          locked: false
+      - name: use pixi to create environment
+        run: |
+          pixi run export-env
+      - name: zip the workspace
+        run: |
+          set -x
+          set -e
+          if [ -f pr_code.zip ]; then
+              rm -rf pr_code.zip
+          fi
+          zip -r pr_code.zip ./ --exclude .git/\* .pixi/\* _build/\*
+      - name: archive PR code
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-zip-${{ github.event.number }}
+          path: pr_code.zip
