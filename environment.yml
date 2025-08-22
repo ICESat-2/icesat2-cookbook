@@ -12,7 +12,7 @@ dependencies:
 - earthaccess *
 - geodatasets *
 - geopandas *
-- icepyxx=2.0.0
+- icepyx=2.0.0
 - ipympl *
 - ipykernel *
 - mystmd *
