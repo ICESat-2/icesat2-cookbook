@@ -8,10 +8,12 @@ dependencies:
 - pre-commit *
 - jupyterlab *
 - jupyterlab-myst *
+- dask *
 - earthaccess *
 - geodatasets *
 - geopandas *
 - icepyx *
+- h5netcdf *
 - ipympl *
 - ipykernel *
 - mystmd *
