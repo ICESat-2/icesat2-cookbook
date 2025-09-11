@@ -9,7 +9,7 @@ project:
     - name: ICESat-2 team
   copyright: '2025'
   references:
-    awesome: https://icesat-2hackweek.github.io/awesome-icesat2
+    awesome: https://icesat-2.github.io/awesome-icesat2
     cryocloud: https://book.cryointhecloud.com
   toc:
     - file: README.md
