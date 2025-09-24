@@ -32,6 +32,7 @@ pyproj = "*"
 rioxarray = "*"
 sliderule = "*"
 icepyx = "2.0.0.*"
+contextily = ">=1.6.2,<2"
 
 [feature.plotting.dependencies]
 cartopy = "*"
