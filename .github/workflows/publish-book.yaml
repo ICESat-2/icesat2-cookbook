@@ -13,6 +13,10 @@ jobs:
     secrets:
       EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USER }}
       EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASS }}
+    with:
+      build_from_code_artifact: 'true'
+      code_artifact_name: code-zip-${{ github.event.number }}
+      workflow: 'trigger-pixi-environment.yaml'
 
   deploy:
     needs: build
