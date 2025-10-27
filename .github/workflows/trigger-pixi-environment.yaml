@@ -28,7 +28,7 @@ jobs:
           fi
           zip -r pr_code.zip ./ --exclude .git/\* .pixi/\* _build/\*
       - name: archive PR code
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: code-zip-${{ github.event.number }}
           path: pr_code.zip
