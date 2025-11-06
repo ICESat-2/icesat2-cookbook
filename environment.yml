@@ -1,4 +1,4 @@
-name: cookbook-dev
+name: icesat2-cookbook-dev
 channels:
 - conda-forge
 - nodefaults
@@ -23,3 +23,6 @@ dependencies:
 - xarray *
 - h5py *
 - geoviews *
+- shapely *
+- contextily * 
+- fiona * 
