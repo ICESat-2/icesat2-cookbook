@@ -21,19 +21,13 @@ project:
     - title: Foundations
       children:
         - file: notebooks/mission-overview.ipynb
-        - file: notebooks/data-access.ipynb
         - file: notebooks/filtering.ipynb
         - file: notebooks/geospatial-transforms.ipynb
         - file: notebooks/data-integration.ipynb
-        - file: notebooks/cloud-computing.ipynb
-        - file: notebooks/machine-learning.ipynb
         - file: notebooks/visualization.ipynb
     - title: Example Workflows
       children:
         - file: notebooks/land-ice.ipynb
-        - file: notebooks/sea-ice.ipynb
-        - file: notebooks/inland-hydrology.ipynb
-        - file: notebooks/bathymetry.ipynb
         - file: notebooks/snowdepth.ipynb
     - title: Additional Resources
       children:
