@@ -3,12 +3,10 @@ channels:
 - conda-forge
 - nodefaults
 dependencies:
-- cartopy *
 - matplotlib *
 - pre-commit *
 - jupyterlab *
 - jupyterlab-myst *
-- dask *
 - earthaccess *
 - geodatasets *
 - geopandas *
@@ -22,7 +20,10 @@ dependencies:
 - sliderule *
 - xarray *
 - h5py *
-- geoviews *
 - shapely *
 - contextily * 
-- fiona * 
+- fiona *
+- scipy
+- earthengine-api
+- geemap
+- pillow 
