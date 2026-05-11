@@ -1,4 +1,4 @@
-name: icesat2-cookbook-dev
+name: icesat2-cookbook
 channels:
 - conda-forge
 - nodefaults
