@@ -30,8 +30,15 @@ build an open science community around ICESat-2 algorithms and software.
 - [Anthony Arendt](@aaarendt)
 - [Jessica Scheick](@JessicaS11)
 - [Mark Welden-Smith](@markweldensmith)
-
-more to be added
+- [Tasha Snow](https://github.com/tsnow03)
+- [Hannah Besso](https://github.com/HBesso)
+- [Scott Henderson](https://github.com/scottyhq)
+- [David Shean](https://github.com/dshean)
+- [Philipp Arndt](@fliphilipp)
+- [Chancelor Roberts](@chancelorr)
+- [Rohaiz Haris](https://github.com/rohaizh)
+- [Karina Zikan](https://github.com/karinazikan)
+- [Zach Fair](https://github.com/zachghiaccio)
 
 ### Contributors
 
