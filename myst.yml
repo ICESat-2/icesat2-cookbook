@@ -28,7 +28,7 @@ project:
     - title: Example Workflows
       children:
         - file: notebooks/land-ice.ipynb
-        - file: notebooks/snowdepth.ipynb
+#        - file: notebooks/snowdepth.ipynb # commented: still in draft
     - title: Additional Resources
       children:
         - file: additional-resources/awesome.md
