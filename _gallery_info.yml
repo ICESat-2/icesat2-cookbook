@@ -1,6 +1,12 @@
 thumbnail: thumbnail.png
 tags:
   domains:
-    - sampledomain
+    - glaciology
+    - snow hydrology
+    - sea ice
+    - remote sensing
   packages:
-    - samplepackage
+    - xarray
+    - rasterio
+    - geopandas
+    - rioxarray
