@@ -1,5 +1,7 @@
-<img src="https://www.nasa.gov/wp-content/uploads/2023/03/icesat2-logo_0.jpg" 
-alt="thumbnail" width="300"/>
+```{image} https://www.nasa.gov/wp-content/uploads/2023/03/icesat2-logo_0.jpg
+:alt: ICESat-2 mission logo
+:width: 300px
+```
 
 # ICESat-2 Cookbook
 
@@ -22,44 +24,47 @@ build an open science community around ICESat-2 algorithms and software.
 
 ## Authors
 
-[Ben Smith](@smithb), 
-[Michalea King](@michaleaking), 
-[Tyler Sutterley](@tsutterley),
-[Anthony Arendt](@aaarendt),
-[Jessica Scheick](@JessicaS11),
-[Mark Welden-Smith](@markweldensmith)
+- [Ben Smith](@smithb)
+- [Michalea King](@michaleaking)
+- [Tyler Sutterley](@tsutterley)
+- [Anthony Arendt](@aaarendt)
+- [Jessica Scheick](@JessicaS11)
+- [Mark Welden-Smith](@markweldensmith)
 
 more to be added
 
 ### Contributors
 
-<a href="https://github.com/ICESAT-2HackWeek/icesat2-cookbook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ICESAT-2HackWeek/icesat2-cookbook" />
-</a>
+[![Contributors](https://contrib.rocks/image?repo=ICESAT-2HackWeek/icesat2-cookbook)](https://github.com/ICESAT-2HackWeek/icesat2-cookbook/graphs/contributors)
 
 ## Structure
 
-This cookbook is broken up into two main sections - "Foundations" 
-and "Example Workflows."
+This cookbook is organized into four main sections: `Preamble`, `Foundations`,
+`Example Workflows`, and `Additional Resources`.
 
-### Section 1: Foundations
+### Preamble
+
+- Governance
+- Contributing
+- Community Engagement
+- How to Cite
+
+### Foundations
 
 * Mission Overview
-* Data Access
 * Filtering
 * Geospatial Transforms
-* Integration
-* Cloud Computing
-* Machine Learning
 * Visualization
 
-### Section 2: Example Workflows for Specific Disciplines
+### Example Workflows
 
 * Land Ice
-* Sea Ice
-* Inland Hydrology
-* Bathymetry
-* Snowdepth
+* Snow Depth
+
+### Additional Resources
+
+* Awesome ICESat-2
+* CryoCloud
 
 ## Running the Notebooks
 
@@ -93,15 +98,15 @@ If you are interested in running this material locally on your computer,
 you will need to follow this workflow:
 
 
-1. Clone the `https://github.com/ProjectPythia/icesat2-cookbook` repository:
+1. Clone the `https://github.com/ICESAT-2HackWeek/icesat2-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/icesat2-cookbook.git
+    git clone https://github.com/ICESAT-2HackWeek/icesat2-cookbook.git
    ```
 
 1. Move into the `icesat2-cookbook` directory
    ```bash
-   cd cookbook-example
+   cd icesat2-cookbook
    ```
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
@@ -120,10 +125,10 @@ Alternatively, you can use [Pixi](https://pixi.sh/) for a more streamlined envir
 
 1. Install Pixi following the [installation instructions](https://pixi.sh/latest/#installation)
 
-2. Clone the `https://github.com/ProjectPythia/icesat2-cookbook` repository:
+2. Clone the `https://github.com/ICESAT-2HackWeek/icesat2-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/icesat2-cookbook.git
+   git clone https://github.com/ICESAT-2HackWeek/icesat2-cookbook.git
    ```
 
 3. Move into the `icesat2-cookbook` directory
