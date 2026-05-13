@@ -3,7 +3,7 @@ version: 1
 extends:
   - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
-  title: ICESat-2 Tutorials
+  title: ICESat-2 Cookbook
   github: https://github.com/ICESAT-2HackWeek/icesat2-cookbook
   authors:
     - name: ICESat-2 team
@@ -17,24 +17,18 @@ project:
       children:
         - file: notebooks/governance.ipynb
         - file: notebooks/contributing.ipynb
+        - file: notebooks/engagement.ipynb
         - file: notebooks/how-to-cite.md
     - title: Foundations
       children:
         - file: notebooks/mission-overview.ipynb
-        - file: notebooks/data-access.ipynb
         - file: notebooks/filtering.ipynb
         - file: notebooks/geospatial-transforms.ipynb
-        - file: notebooks/data-integration.ipynb
-        - file: notebooks/cloud-computing.ipynb
-        - file: notebooks/machine-learning.ipynb
         - file: notebooks/visualization.ipynb
     - title: Example Workflows
       children:
         - file: notebooks/land-ice.ipynb
-        - file: notebooks/sea-ice.ipynb
-        - file: notebooks/inland-hydrology.ipynb
-        - file: notebooks/bathymetry.ipynb
-        - file: notebooks/snowdepth.ipynb
+#        - file: notebooks/snowdepth.ipynb # commented: still in draft
     - title: Additional Resources
       children:
         - file: additional-resources/awesome.md
@@ -44,3 +38,17 @@ project:
         url: https://hub.cryointhecloud.com
         provider: github
         repo: ICESAT-2HackWeek/icesat2-cookbook
+error_rules:
+  - rule: link-resolves
+    severity: ignore
+    keys:
+      - 'https://doi.org/**'
+      - 'https://zenodo.org/**'
+      - 'https://www.neonscience.org/**'
+      - 'https://onlinelibrary.wiley.com/**'
+      - 'https://agupubs.onlinelibrary.wiley.com/**'
+  - rule: doi-link-valid
+    severity: ignore
+    keys:
+      - 'https://zenodo.org/**'
+      - 'https://doi.org/**'

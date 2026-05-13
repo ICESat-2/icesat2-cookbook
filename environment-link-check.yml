@@ -1,0 +1,6 @@
+name: link-check
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - mystmd *

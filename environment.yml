@@ -1,18 +1,16 @@
-name: icesat2-cookbook-dev
+name: icesat2-cookbook
 channels:
 - conda-forge
 - nodefaults
 dependencies:
-- cartopy *
 - matplotlib *
 - pre-commit *
 - jupyterlab *
 - jupyterlab-myst *
-- dask *
 - earthaccess *
 - geodatasets *
 - geopandas *
-- icepyx=2.0.0
+- icepyx *
 - ipympl *
 - ipykernel *
 - mystmd *
@@ -22,7 +20,10 @@ dependencies:
 - sliderule *
 - xarray *
 - h5py *
-- geoviews *
 - shapely *
 - contextily * 
-- fiona * 
+- fiona *
+- scipy
+- earthengine-api
+- geemap
+- pillow 

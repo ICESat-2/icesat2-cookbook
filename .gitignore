@@ -139,3 +139,6 @@ dmypy.json
 .vscode/
 # pixi environments
 .pixi
+pixi.lock
+
+.agents/*
