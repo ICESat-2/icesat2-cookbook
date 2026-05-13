@@ -36,7 +36,7 @@ build an open science community around ICESat-2 algorithms and software.
 - [David Shean](https://github.com/dshean)
 - [Philipp Arndt](@fliphilipp)
 - [Chancelor Roberts](@chancelorr)
-- [Rohaiz Haris](https://github.com/rohaizh)
+- [Rohaiz Haris](https://github.com/rohaizharis)
 - [Karina Zikan](https://github.com/karinazikan)
 - [Zach Fair](https://github.com/zachghiaccio)
 
