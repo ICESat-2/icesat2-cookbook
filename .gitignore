@@ -140,3 +140,5 @@ dmypy.json
 # pixi environments
 .pixi
 pixi.lock
+
+.agents/*
