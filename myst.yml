@@ -22,6 +22,7 @@ project:
     - title: Foundations
       children:
         - file: notebooks/mission-overview.ipynb
+        - file: notebooks/data-access-pathways.md
         - file: notebooks/filtering.ipynb
         - file: notebooks/geospatial-transforms.ipynb
         - file: notebooks/visualization.ipynb
