@@ -51,7 +51,7 @@ authors:
     given-names: Zach
     website: https://github.com/zachghiaccio
   - name: "ICESat-2 Cookbook contributors"
-    website: "https://github.com/ICESAT-2HackWeek/icesat2-cookbook"
+    website: "https://github.com/ProjectPythia/icesat2-cookbook"
 title: "ICESat-2 Cookbook"
 abstract: "A collection of tutorials for accessing, filtering, and analyzing 
   data from NASA's Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) mission. 
