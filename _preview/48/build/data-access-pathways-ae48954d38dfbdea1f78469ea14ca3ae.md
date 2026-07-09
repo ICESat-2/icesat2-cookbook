@@ -12,12 +12,12 @@ The best way to access ICESat-2 data depends on your desired use case. Below, we
 |Access Consideration   	|[Earthaccess](https://earthaccess.readthedocs.io/en/stable/)   	|[icepyx](https://icepyx.readthedocs.io/en/latest/)   	|[SlideRule](https://slideruleearth.io/web/rtd/) 	|
 |---	|---	|---	|---	|
 |Data Product |Any dataset available at [NASA Earthdata](https://www.earthdata.nasa.gov/)  	|All ICESat-2 products (except quicklooks)|ATL03, 06, 08, 13, and 24 only   	|
-|Cloud Streaming <br> *You need compute beyond your local machine*  	|:heavy_check_mark:[^1]   	|:large_orange_diamond:   	|:heavy_check_mark: 	|
-|Local Download <br> *You have enough memory to store and process data locally*    	|:heavy_check_mark:   	|:heavy_check_mark:   	|:x:|
+|Cloud Streaming  *You need compute beyond your local machine*  	|✔️[^1]   	|🔶  	|✔️ 	|
+|Local Download  *You have enough memory to store and process data locally*    	|✔️   	|✔️   	| ❌ |
 | Interface Type    | Python library    | Python library    | Python library or GUI |
 |GUI    	|[NASA Earthdata Search](https://search.earthdata.nasa.gov/) 	|   	|[SlideRule Web Client](https://client.slideruleearth.io/)   	|
-|Subsetting   	|:x:  	| :x:  	|Spatial, Temporal, Variables   	|
-| On-demand Data Processing | :x:   | :x:   | :heavy_check_mark:    |
+|Subsetting   	|❌  	| ❌  	|Spatial, Temporal, Variables   	|
+| On-demand Data Processing | ❌  | ❌  | ✔️    |
 |Other Data Products   	|   	| ARGO  	|GEDI   	|
    
 
@@ -36,4 +36,4 @@ The best way to access ICESat-2 data depends on your desired use case. Below, we
     ds = xr.open_dataset(url, engine='h5coro', group=<group>, credentials=creds)
     ```
 
-:large_orange_diamond: in development
+🔶 in development
