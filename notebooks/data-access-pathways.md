@@ -3,7 +3,7 @@ The best way to access ICESat-2 data depends on your desired use case. Below, we
 
 **Data Product** Select an ICESat-2 [data product](https://icesat-2.gsfc.nasa.gov/science/data-products) that aligns with your goals. We recommend starting from a higher level data product and working down if necessary.
 
-**Data Volume** Select a *local download* computing environment if you have enough memory to store and proccess the data you or using; otherwise select a *cloud streaming* environment.
+**Data Volume** Select a *local download* computing environment if you have enough disk space to store and process the data you or using; otherwise select a *cloud streaming* environment.
 
 **Access Method** All access methods support programmatic access, but some also provide *GUIs*. We recommend using a GUI only for testing small amounts of data and programmatically accessing data in your workflows.
 
