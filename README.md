@@ -5,8 +5,8 @@
 
 # ICESat-2 Cookbook
 
-[![nightly-build](https://github.com/ICESAT-2HackWeek/icesat2-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ICESAT-2HackWeek/icesat2-cookbook/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ICESAT-2HackWeek/icesat2-cookbook/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/icesat2-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/icesat2-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/icesat2-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10519966.svg)](https://doi.org/10.5281/zenodo.10519966)
 
 This Project Pythia Cookbook is a compilation of tutorials developed from 2019 
@@ -42,7 +42,7 @@ build an open science community around ICESat-2 algorithms and software.
 
 ### Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=ICESAT-2HackWeek/icesat2-cookbook)](https://github.com/ICESAT-2HackWeek/icesat2-cookbook/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=ProjectPythia/icesat2-cookbook)](https://github.com/ProjectPythia/icesat2-cookbook/graphs/contributors)
 
 ## Structure
 
@@ -105,10 +105,10 @@ If you are interested in running this material locally on your computer,
 you will need to follow this workflow:
 
 
-1. Clone the `https://github.com/ICESAT-2HackWeek/icesat2-cookbook` repository:
+1. Clone the `https://github.com/ProjectPythia/icesat2-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ICESAT-2HackWeek/icesat2-cookbook.git
+    git clone https://github.com/ProjectPythia/icesat2-cookbook.git
    ```
 
 1. Move into the `icesat2-cookbook` directory
@@ -125,39 +125,3 @@ you will need to follow this workflow:
    cd notebooks/
    jupyter lab
    ```
-
-### Running with Pixi
-
-Alternatively, you can use [Pixi](https://pixi.sh/) for a more streamlined environment management experience:
-
-1. Install Pixi following the [installation instructions](https://pixi.sh/latest/#installation)
-
-2. Clone the `https://github.com/ICESAT-2HackWeek/icesat2-cookbook` repository:
-
-   ```bash
-   git clone https://github.com/ICESAT-2HackWeek/icesat2-cookbook.git
-   ```
-
-3. Move into the `icesat2-cookbook` directory
-
-   ```bash
-   cd icesat2-cookbook
-   ```
-
-4. Install dependencies and start JupyterLab with a single command:
-
-   ```bash
-   pixi run start
-   ```
-
-This will automatically create the environment, install all dependencies, and launch JupyterLab in the `notebooks` directory.
-
-#### Exporting Conda Environment with Pixi
-
-If you're using pixi and want to generate a conda-compatible `environment.yml` file for sharing or reproducibility:
-
-```bash
-pixi run export-env
-```
-
-This command will export the pixi workspace to a conda environment file (`environment.yml`) that can be used with conda or mamba.

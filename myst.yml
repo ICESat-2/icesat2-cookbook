@@ -4,7 +4,7 @@ extends:
   - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
   title: ICESat-2 Cookbook
-  github: https://github.com/ICESAT-2HackWeek/icesat2-cookbook
+  github: https://github.com/ProjectPythia/icesat2-cookbook
   authors:
     - name: ICESat-2 team
   copyright: '2025'
@@ -22,6 +22,7 @@ project:
     - title: Foundations
       children:
         - file: notebooks/mission-overview.ipynb
+        - file: notebooks/data-access-pathways.md
         - file: notebooks/filtering.ipynb
         - file: notebooks/geospatial-transforms.ipynb
         - file: notebooks/visualization.ipynb
@@ -37,7 +38,7 @@ project:
       binder:
         url: https://hub.cryointhecloud.com
         provider: github
-        repo: ICESAT-2HackWeek/icesat2-cookbook
+        repo: ProjectPythia/icesat2-cookbook
 error_rules:
   - rule: link-resolves
     severity: ignore
