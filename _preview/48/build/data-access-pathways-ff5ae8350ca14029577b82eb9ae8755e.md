@@ -5,9 +5,9 @@ The best way to access ICESat-2 data depends on your desired use case. Below, we
 
 **Data Volume** Select a *local download* computing environment if you have enough memory to store and proccess the data you or using; otherwise select a *cloud streaming* environment.
 
-**Access Method** All access methods support programmatic access, but some also provide *GUIs*. We recommend using a GUI only for testing small amounts of data and programatically accessing data in your workflows.
+**Access Method** All access methods support programmatic access, but some also provide *GUIs*. We recommend using a GUI only for testing small amounts of data and programmatically accessing data in your workflows.
 
-**Data Use Case** Choose if you require *subsetting* (choosing specific regions or variables to download) or *interoperability* by downloading additional data from different sources using the same access method.
+**Data Use Case** Choose whether you require *subsetting* (choosing specific regions or variables to download) or *interoperability* by downloading additional data from different sources using the same access method.
 
 |Access Consideration   	|[Earthaccess](https://earthaccess.readthedocs.io/en/stable/)   	|[icepyx](https://icepyx.readthedocs.io/en/latest/)   	|[SlideRule](https://slideruleearth.io/web/rtd/) 	|
 |---	|---	|---	|---	|
