@@ -20,6 +20,9 @@
     <loc>http://localhost:3000/notebooks/mission-overview</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/notebooks/data-access-pathways</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/notebooks/filtering</loc>
   </url>
   <url>
